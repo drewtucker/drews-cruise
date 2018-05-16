@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
-import './App.css';
+import HomePage from './HomePage';
+import Header from './Header';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          
-        </header>
+      <div>
+      <style jsx global> {`
+          body {
+            margin: 0;
+            padding: 0;
+          }`}
+      </style>
+      <Header/>
+      <HomePage/>
       </div>
     );
   }
