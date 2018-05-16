@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom';
 import App from './components/App';
 import registerServiceWorker from './registerServiceWorker';
 import { AppContainer } from 'react-hot-loader';
+import { HashRouter } from 'react-router-dom';
 
 const render = (Component) => {
   ReactDOM.render(
     <AppContainer>
-      <App></App>
+      <HashRouter>
+        <App></App>
+      </HashRouter>
     </AppContainer>,
     document.getElementById('react-app-root')
   );
