@@ -28,6 +28,10 @@ function Header() {
             font-size: 2.5vw;
              }
 
+          a:hover {
+            color: black;
+          }
+
 
 
             `}
@@ -43,8 +47,8 @@ export default Header;
 var headerStyles = {
   position: 'fixed',
   top: '10%',
-  right: '75%',
-  left: '20%',
+  right: '65%',
+  left: '15%',
   width: '70%',
   textAlign: 'center',
   color: 'white',

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import HomePage from './HomePage';
 import Header from './Header';
+import Footer from './Footer';
 import { Switch, Route } from 'react-router-dom';
 
 class App extends Component {
@@ -15,6 +16,7 @@ class App extends Component {
       </style>
       <Header/>
       <HomePage/>
+      <Footer/>
       </div>
     );
   }
