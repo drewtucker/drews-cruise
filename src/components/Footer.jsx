@@ -15,15 +15,17 @@ function Footer() {
       </ul>
       <ul>
         <h5>Contact Us</h5>
-        <li><a class='footer-button'>Facebook</a></li>
-        <li><a class='footer-button'>Twitter</a></li>
-        <li><a class='footer-button'>Instagram</a></li>
+        <li><a className='footer-button'>Facebook</a></li>
+        <li><a className='footer-button'>Twitter</a></li>
+        <li><a className='footer-button'>Instagram</a></li>
       </ul>
       <style>{`
           #footer-wrapper {
             display: flex;
+            width: 100%;
             border: 2px solid black;
             justify-content: space-around;
+            bottom: 0;
           }
           ul {
             list-style-type: none;
@@ -33,7 +35,7 @@ function Footer() {
             background-color: white;
             color: black;
             padding: 0;
-            
+
           }
 
             `}

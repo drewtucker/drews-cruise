@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from './Header';
 import bgImage from '../img/single-boat-bg.jpeg';
 
 
@@ -7,7 +8,7 @@ function HomePage() {
   return(
     <div id='home-page-wrapper' style={homePageStyles}>
       <div>
-
+        <Header/>
       </div>
     </div>
   );

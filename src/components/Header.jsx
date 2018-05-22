@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import bgImage from '../img/single-boat-bg.jpeg';
 
 function Header() {
@@ -8,7 +9,7 @@ function Header() {
 
       <div id='header-inner-wrapper' className='w3-center w3-animate-top' style={innerWrapperStyles}>
         <div id='header-nav' className='flex-container' style={navStyles}>
-          <div><a href='#'>Destinations</a></div>
+          <Link to='/destinations'><a>Destinations</a></Link>
           <div><a href='#'>Packages</a></div>
           <div><a href='#'>Log In</a></div>
         </div>
