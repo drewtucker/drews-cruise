@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-import HomePage from './HomePage';
-import Header from './Header';
+import { Route, Switch } from 'react-router-dom';
+import DestinationsMain from '../components/destinations/DestinationsMain';
 import Footer from './Footer';
+import HomePage from './HomePage';
 import Navbar from './Navbar';
-import DestinationsMain from './DestinationsMain';
-import { Switch, Route } from 'react-router-dom';
-import TransitionGroup from "react-transition-group/TransitionGroup";
 
 
 

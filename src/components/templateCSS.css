@@ -1,0 +1,28 @@
+@media only screen and (max-width: 800px){
+  .flex-container {
+    background-color: black;
+  }
+}
+#destinations-header {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  left: 33%;
+  width: 33%;
+  border-radius: 15px;
+  color: white;
+  padding-top: 5vw;
+}
+
+.flex-container {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0.5vw;
+  left: 7%;
+  right: 7%;
+  background-color: white;
+  border-radius: 15px;
+  border: 1px solid lightgray;
+}
