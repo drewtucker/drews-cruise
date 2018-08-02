@@ -59,7 +59,6 @@ function DestinationsMain(){
             }
 
             .banner p {
-              display: inline;
               color: white;
               font-size: 60px;
               text-shadow: 1px 1px 1px black;
@@ -160,7 +159,8 @@ function DestinationsMain(){
               font-weight: bold;
             }
             #destinations-background {
-              background-image: url(${destinationsBG});            background-position: 10% 0%;
+              background-image: url(${destinationsBG});            
+              background-position: 10% 0%;
               height: 100%;
               width: 100%;
             }`}
@@ -169,12 +169,5 @@ function DestinationsMain(){
     );
   }
 
-  var backgroundStyles = {
-    backgroundImage: `url(${destinationsBG})`,
-    backgroundSize: 'cover',
-    backgroundPosition: '10% 0%',
-    width: '100vw',
-    height: '100vw',
-  }
 
   export default DestinationsMain;
