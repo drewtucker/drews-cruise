@@ -8,7 +8,7 @@ module.exports = {
     'react-hot-loader/patch',
     'webpack-dev-server/client?http://localhost:8080',
     'webpack/hot/only-dev-server',
-    resolve(__dirname, "src", "index.jsx")
+    resolve(__dirname, 'src', 'index.jsx')
   ],
 
   output: {
@@ -33,16 +33,11 @@ module.exports = {
     rules: [
       {
         test: /\.jsx?$/,
-        loader: "babel-loader",
+        loader: 'babel-loader',
         exclude: /node_modules/,
         options: {
-          presets: [
-            ["es2015", {"modules": false}],
-            "react",
-          ],
-          plugins: [
-            "react-hot-loader/babel"
-          ]
+          presets: [['es2015', { modules: false }], 'react'],
+          plugins: ['react-hot-loader/babel']
         }
       },
       {
@@ -55,6 +50,10 @@ module.exports = {
           }
         }
       },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      }
     ]
   },
 
@@ -62,10 +61,10 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
     new HtmlWebpackPlugin({
-      template:'template.ejs',
+      template: 'template.ejs',
       appMountId: 'react-app-root',
-      title: 'Drew\'s Cruise',
-      filename: resolve(__dirname, "build", "index.html"),
-    }),
+      title: "Drew's Cruise",
+      filename: resolve(__dirname, 'build', 'index.html')
+    })
   ]
 };
