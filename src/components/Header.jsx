@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import bgImage from '../img/single-boat-bg.jpeg';
 
 function Header() {
   return(
@@ -20,7 +19,7 @@ function Header() {
 
 
       <style>{`
-          a {
+          #header-wrapper a {
             text-decoration: none;
             color: white;
             background-color: #ff8c1a;

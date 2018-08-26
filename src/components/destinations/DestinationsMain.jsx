@@ -1,14 +1,14 @@
 import React from 'react';
 import MediaQuery from 'react-responsive';
-import alaskaCard from '../img/alaska-card.jpg';
-import caribbeanCard from '../img/caribbean-card.jpg';
-import hawaiiCard from '../img/hawaii-card.jpg';
-import newEnglandCard from '../img/new-england-card.jpg';
-import thailandCard from '../img/thailand-card.jpg';
-import norwayCard from '../img/norway-card.jpg';
-import cubaCard from '../img/cuba-card.jpg';
-import destinationsBG from '../img/destinations-bg.jpg';
-import destinationsBanner from '../img/destinations-banner.jpg';
+import alaskaCard from '../../img/alaska-card.jpg';
+import caribbeanCard from '../../img/caribbean-card.jpg';
+import cubaCard from '../../img/cuba-card.jpg';
+import destinationsBanner from '../../img/destinations-banner.jpg';
+import destinationsBG from '../../img/destinations-bg.jpg';
+import hawaiiCard from '../../img/hawaii-card.jpg';
+import newEnglandCard from '../../img/new-england-card.jpg';
+import norwayCard from '../../img/norway-card.jpg';
+import thailandCard from '../../img/thailand-card.jpg';
 
 
 const cards = { 'Alaska': alaskaCard, 'Caribbean': caribbeanCard, 'Hawaii': hawaiiCard, 'New England': newEnglandCard, 'Thailand': thailandCard, 'Norway': norwayCard, 'Cuba': cubaCard};
@@ -52,6 +52,7 @@ function DestinationsMain(){
               border-left: 5px solid black;
               outline: 5px solid gray;
               padding: 10px;
+              margin-top: 50px;
             }
 
             .banner img {
