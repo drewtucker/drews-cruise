@@ -29,7 +29,7 @@ function Navbar() {
                 </a>
               </div>
               <div class="dropdown-content">
-                <a href='#'>Alaska</a>
+                <Link to='/alaska'><a href='#'>Alaska</a></Link>
                 <a href='#'>Caribbean</a>
                 <a href='#'>Hawaii</a>
                 <a href="#">New England</a>
