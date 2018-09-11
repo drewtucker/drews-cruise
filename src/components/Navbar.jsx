@@ -52,6 +52,8 @@ function Navbar() {
             </Link>
           </MediaQuery>
 
+          
+
           <div id="mobile-icons-wrapper">
             <Link to="/destinations">
               <div class="navbar-icon-wrapper">
@@ -78,6 +80,13 @@ function Navbar() {
           </div>
         </MediaQuery>
       </div>
+
+    <MediaQuery maxWidth={399}>
+      <Link to="/" className='mobile-sub-logo'>
+        <p className="mobile-sub-logo">Casimir Cruises</p>
+        <br/>
+      </Link>
+    </MediaQuery>
 
       <style>{`
 
@@ -108,6 +117,16 @@ function Navbar() {
           text-decoration: none;
         }
 
+
+        .mobile-sub-logo {
+          display: block;
+          display: flex;
+          justify-content: center;
+          text-decoration: none;
+          color: white;
+          background-color: darkgray;
+          font-family: Cinzel, serif;
+        }
 
         #navbar-wrapper-right {
           display: flex;
