@@ -17,7 +17,7 @@ export default HomePage;
 
 var homePageStyles = {
 
-  backgroundColor: 'darkgray',
+  backgroundColor: 'beige',
   backgroundSize: 'cover',
 
   backgroundPosition: '80% 30%',

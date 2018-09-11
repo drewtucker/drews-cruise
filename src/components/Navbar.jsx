@@ -4,10 +4,11 @@ import { Link } from 'react-router-dom';
 
 function Navbar() {
 
+
   return <div>
       {/* STANDARD LAYOUT */}
 
-      <div className="navbar-standard">
+      <div class="navbar-standard">
         <MediaQuery minWidth={738}>
           <div id="navbar-wrapper-left">
             <Link to="/">
@@ -19,12 +20,24 @@ function Navbar() {
 
           <div id="navbar-wrapper-right">
             <Link to="/destinations">
+            <div class="dropdown">
+
               <div class="navbar-icon-wrapper">
                 <a href="#">
                   <i class="fa fa-ship" id="ship-icon" />
                   <span class="navbar-text">Destinations</span>
                 </a>
               </div>
+              <div class="dropdown-content">
+                <a href='#'>Alaska</a>
+                <a href='#'>Caribbean</a>
+                <a href='#'>Hawaii</a>
+                <a href="#">New England</a>
+                <a href="#">Thailand</a>
+                <a href="#">Norway</a>
+                <a href="#">Cuba</a>
+              </div>
+            </div>
             </Link>
             <div class="navbar-icon-wrapper">
               <a href="#">
@@ -82,8 +95,8 @@ function Navbar() {
       </div>
 
     <MediaQuery maxWidth={399}>
-      <Link to="/" className='mobile-sub-logo'>
-        <p className="mobile-sub-logo">Casimir Cruises</p>
+      <Link to="/" class='mobile-sub-logo'>
+        <p class="mobile-sub-logo">Casimir Cruises</p>
         <br/>
       </Link>
     </MediaQuery>
@@ -94,7 +107,7 @@ function Navbar() {
           display: flex;
           justify-content: space-between;
           background-color:  #ffa366;
-          border-bottom: 3px solid #9BD7D5;
+          border-bottom: 3px solid #60989C;
           
         }
 
@@ -152,10 +165,8 @@ function Navbar() {
         .navbar-icon-wrapper {
           justify-content: center;
           text-align: center;
-          width: 75px;
+          width: 150px;
           color: white;
-          margin-left: 20px;
-          margin-right: 20px;
           padding-bottom: 8px;
           padding-top: 8px;
           text-decoration: none;
@@ -164,9 +175,9 @@ function Navbar() {
         
         .navbar-icon-wrapper:hover {
           background-color: white;
-          color: #129793;
-          opacity: 0.70;
-          border-radius: 8px;
+          color: #60989C;
+          opacity: 1;
+          border-radius: 2px;
         }
 
         #navbar-wrapper-right a {
@@ -188,7 +199,7 @@ function Navbar() {
         }
 
         #ship-icon {
-          margin-top: 2px;
+          margin-top: -1px;
           font-size: 23px;
           padding-bottom: 6.55px;
         }
@@ -199,17 +210,40 @@ function Navbar() {
           font-family: Cinzel, serif;
           text-decoration: none;
           font-size: 20px;
+        } 
+
+        .dropdown {
+          float: left;
+          overflow: hidden;
         }
 
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #c9c9c9;
+          width: 150px;
+          z-index: 2;
+          box-shadow: 4px 8px 16px 0px rgba(0,0,0,0.2);
+          border-radius: 1px;
+        }
 
-        .navbar-dropdown {
+        .dropdown-content a {
+          float: none;
+          color: black;
+          max-height: 100px;
+          padding: 12px 16px;
+          text-decoration: none;
           display: block;
-          justify-content: center;
-          backgroundColor: blue;
-          width: 200px;
-          maxHeight: 150px;
-          color: beige;
+          text-align: center;
+        }
 
+        .dropdown-content a:hover {
+          background-color: #60989C;
+        }
+
+        .dropdown:hover .dropdown-content {
+          display: block;
+         
         }
 
         
