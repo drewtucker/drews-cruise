@@ -29,7 +29,7 @@ function Navbar() {
                 </a>
               </div>
               <div class="dropdown-content">
-                <Link to='/alaska'><a href='#'>Alaska</a></Link>
+                <Link to='/alaska'>Alaska</Link>
                 <a href='#'>Caribbean</a>
                 <a href='#'>Hawaii</a>
                 <a href="#">New England</a>
@@ -59,13 +59,6 @@ function Navbar() {
 
       <div class="navbar-mobile">
         <MediaQuery maxWidth={737}>
-          <MediaQuery minWidth={400}>
-            <Link to="/">
-              <p id="mobile-logo">CC</p>
-            </Link>
-          </MediaQuery>
-
-          
 
           <div id="mobile-icons-wrapper">
             <Link to="/destinations">
@@ -94,7 +87,7 @@ function Navbar() {
         </MediaQuery>
       </div>
 
-    <MediaQuery maxWidth={399}>
+    <MediaQuery maxWidth={736}>
       <Link to="/" class='mobile-sub-logo'>
         <p class="mobile-sub-logo">Casimir Cruises</p>
         <br/>
@@ -225,13 +218,14 @@ function Navbar() {
           z-index: 2;
           box-shadow: 4px 8px 16px 0px rgba(0,0,0,0.2);
           border-radius: 1px;
+          max-height: 0px;
         }
 
         .dropdown-content a {
           float: none;
           color: black;
           max-height: 100px;
-          padding: 12px 16px;
+          padding: 12px;
           text-decoration: none;
           display: block;
           text-align: center;
@@ -239,11 +233,16 @@ function Navbar() {
 
         .dropdown-content a:hover {
           background-color: #60989C;
+          transition: .15s ease-out;
         }
 
         .dropdown:hover .dropdown-content {
           display: block;
-         
+          max-height: 800px;
+        }
+
+        .dropdown: hover {
+          
         }
 
         

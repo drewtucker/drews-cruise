@@ -3,6 +3,7 @@ import Slider from 'react-slick';
 import slide1 from '../img/carousel/italy.jpg';
 import slide2 from '../img/carousel/globe.jpg';
 import { Link } from 'react-router-dom';
+import MediaQuery from 'react-responsive';
 
 class Carousel extends React.Component {
   render() {
@@ -20,6 +21,8 @@ class Carousel extends React.Component {
     };
 
     return(
+      <MediaQuery minWidth={600}>
+
       <div style={WrapperStyles}>
       <Slider {...settings}>
         <Link to='/'>
@@ -42,8 +45,9 @@ class Carousel extends React.Component {
           width: auto;
           padding: 0px 0px;
         }
-      `}</style>
+        `}</style>
       </div>
+        </MediaQuery>
     )
   }
 }
@@ -83,7 +87,7 @@ var slide2TextStyles = {
   fontSize: '50px',
   fontWeight: '50',
   letterSpacing: '1px',
-  fontFamily: 'Abril Fatface, cursive',
+  fontFamily: 'Arial, serif',
 
 }
 
