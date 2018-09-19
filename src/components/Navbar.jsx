@@ -99,17 +99,24 @@ function Navbar() {
         .navbar-standard {
           display: flex;
           justify-content: space-between;
+          position: absolute;
+          top: 0;
+          width: 100%;
           background-color:  #ffa366;
           border-bottom: 3px solid #60989C;
-          
+          z-index: 10;
         }
 
         .navbar-mobile {
           display: flex;
           justify-content: center;
+          position: absolute;
+          top: 0;
+          width: 100%;
           background-color:  #ffa366;
           color: white;
           text-decoration: none;
+          z-index: 10;
         }
 
         #mobile-icons-wrapper {

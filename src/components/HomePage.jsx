@@ -1,14 +1,24 @@
 import React from 'react';
 import bgImage from '../img/single-boat-bg.jpeg';
 import MainCarousel from './MainCarousel';
+import MainBanner from '../components/MainBanner';
+
 
 function HomePage() {
 
   return(
+    <div>
+
+    <div>
+      <MainBanner />
+    </div>
     <div id='home-page-wrapper' style={homePageStyles}>
+    <div>
+    </div>
       <div style={CarouselStyles}>
         <MainCarousel/>
       </div>
+    </div>
     </div>
   );
 }
@@ -16,18 +26,12 @@ function HomePage() {
 export default HomePage;
 
 var homePageStyles = {
-
-  backgroundColor: 'beige',
-  backgroundSize: 'cover',
-
-  backgroundPosition: '80% 30%',
-  width: '100vw',
-  height: '100vw',
-  paddingBottom: '200px',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
 }
 
 var CarouselStyles = {
-  display: 'flex',
-  justifyContent: 'center',
-  paddingTop: '20px',
+  alignSelf: 'center',
+  padding: '20px 0px 20px 0px',
 }
