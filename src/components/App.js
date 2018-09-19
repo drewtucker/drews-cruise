@@ -7,7 +7,6 @@ import Navbar from './Navbar';
 import Alaska from './destinations/DestinationsPages/Alaska';
 
 
-
 class App extends Component {
   render() {
     return (

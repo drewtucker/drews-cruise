@@ -19,7 +19,7 @@ function Navbar() {
           </div>
 
           <div id="navbar-wrapper-right">
-            <Link to="/destinations">
+            <Link to="/destinations" className='dropdown'>
             <div class="dropdown">
 
               <div class="navbar-icon-wrapper">
@@ -30,12 +30,12 @@ function Navbar() {
               </div>
               <div class="dropdown-content">
                 <Link to='/alaska'>Alaska</Link>
-                <a href='#'>Caribbean</a>
-                <a href='#'>Hawaii</a>
-                <a href="#">New England</a>
-                <a href="#">Thailand</a>
-                <a href="#">Norway</a>
-                <a href="#">Cuba</a>
+                <Link to='/caribbean'>Caribbean</Link>
+                <Link to='/hawaii'>Hawaii</Link>
+                <Link to={'/new' + 'england'}>New England</Link>
+                <Link to='/thailand'>Thailand</Link>
+                <Link to='/norway'>Norway</Link>
+                <Link to='/cuba'>Cuba</Link>
               </div>
             </div>
             </Link>
@@ -158,7 +158,7 @@ function Navbar() {
         .navbar-icon-wrapper {
           justify-content: center;
           text-align: center;
-          width: 150px;
+          width: 100px;
           color: white;
           padding-bottom: 8px;
           padding-top: 8px;
@@ -189,6 +189,8 @@ function Navbar() {
           display: block;
           font-size: 9px;
           text-decoration: none;
+          margin: auto;
+          width: 100%;
         }
 
         #ship-icon {
@@ -207,15 +209,14 @@ function Navbar() {
 
         .dropdown {
           float: left;
-          overflow: hidden;
         }
 
         .dropdown-content {
           display: none;
           position: absolute;
           background-color: #c9c9c9;
-          width: 150px;
-          z-index: 2;
+          width: 100px;
+          z-index: 4;
           box-shadow: 4px 8px 16px 0px rgba(0,0,0,0.2);
           border-radius: 1px;
           max-height: 0px;
@@ -239,6 +240,7 @@ function Navbar() {
         .dropdown:hover .dropdown-content {
           display: block;
           max-height: 800px;
+          z-index: 5;
         }
 
         .dropdown: hover {

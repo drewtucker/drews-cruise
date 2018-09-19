@@ -1,13 +1,13 @@
 import React from 'react';
 import bgImage from '../img/single-boat-bg.jpeg';
-import Carousel from '../components/Carousel.jsx';
+import MainCarousel from './MainCarousel';
 
 function HomePage() {
 
   return(
     <div id='home-page-wrapper' style={homePageStyles}>
       <div style={CarouselStyles}>
-        <Carousel/>
+        <MainCarousel/>
       </div>
     </div>
   );
@@ -29,5 +29,5 @@ var homePageStyles = {
 var CarouselStyles = {
   display: 'flex',
   justifyContent: 'center',
-  paddingTop: '10rem',
+  paddingTop: '20px',
 }
