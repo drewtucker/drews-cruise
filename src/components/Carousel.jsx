@@ -1,7 +1,7 @@
 import React from 'react';
 import Slider from 'react-slick';
-import slide1 from '../img/carousel/italy.jpg';
-import slide2 from '../img/carousel/globe.jpg';
+import slide1 from './../img/carousel/italy.jpg';
+import slide2 from './../img/carousel/globe.jpg';
 import { Link } from 'react-router-dom';
 import MediaQuery from 'react-responsive';
 

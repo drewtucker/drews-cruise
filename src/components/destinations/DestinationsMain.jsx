@@ -1,27 +1,35 @@
 import React from 'react';
 import MediaQuery from 'react-responsive';
-import alaskaCard from '../../img/alaska-card.jpg';
-import caribbeanCard from '../../img/caribbean-card.jpg';
-import cubaCard from '../../img/cuba-card.jpg';
-import destinationsBanner from '../../img/destinations-banner.jpg';
-import destinationsBG from '../../img/destinations-bg.jpg';
-import hawaiiCard from '../../img/hawaii-card.jpg';
-import newEnglandCard from '../../img/new-england-card.jpg';
-import norwayCard from '../../img/norway-card.jpg';
-import thailandCard from '../../img/thailand-card.jpg';
+import alaskaCard from './../../img/alaska-card.jpg';
+import caribbeanCard from './../../img/caribbean-card.jpg';
+import cubaCard from './../../img/cuba-card.jpg';
+import destinationsBanner from './../../img/destinations-banner.jpg';
+import destinationsBG from './../../img/destinations-bg.jpg';
+import hawaiiCard from './../../img/hawaii-card.jpg';
+import newEnglandCard from './../../img/new-england-card.jpg';
+import norwayCard from './../../img/norway-card.jpg';
+import thailandCard from './../../img/thailand-card.jpg';
+import { Link } from 'react-router-dom';
 
 
 const cards = { 'Alaska': alaskaCard, 'Caribbean': caribbeanCard, 'Hawaii': hawaiiCard, 'New England': newEnglandCard, 'Thailand': thailandCard, 'Norway': norwayCard, 'Cuba': cubaCard};
 
-function DestinationsMain(){
+class DestinationsMain extends React.Component{
+  render(){
+    const {
+      route,
+    } = this.props;
+  
   return(
     <div className='flex-container'>
       <MediaQuery maxWidth={737} className='mobile'>
       {Object.keys(cards).map(card => (
+        <Link to={'/' + card}>
         <div key={card} className='destination-card-mobile'>
         <h2 className='destination-card-text'>{card}</h2>
         <img src={cards[card]} />
         </div>
+        </Link>
       ))}
       </MediaQuery>
       <MediaQuery minWidth={738} >
@@ -31,10 +39,12 @@ function DestinationsMain(){
       </div>
       <div className='standard'>
         {Object.keys(cards).map(card => (
+          <Link to={'/' + card}>
           <div key={card} className='destination-card-standard'>
             <h2 className='destination-card-text'>{card}</h2>
             <img src={cards[card]} />
           </div>
+          </Link>
         ))}
         </div>
       </MediaQuery>
@@ -119,12 +129,12 @@ function DestinationsMain(){
 
             .mobile img {
               max-height: 175px;
-              width: 100vw;
+              width: 300px;
             }
 
             .standard img {
               max-height: 175px;
-              width: 100vw;
+              width: 50vw;
             }
 
             .standard {
@@ -168,6 +178,7 @@ function DestinationsMain(){
           </style>
         </div>
     );
+   }
   }
 
 

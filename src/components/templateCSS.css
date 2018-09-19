@@ -1,8 +1,4 @@
-@media only screen and (max-width: 800px){
-  .flex-container {
-    background-color: black;
-  }
-}
+
 #destinations-header {
   display: flex;
   justify-content: center;

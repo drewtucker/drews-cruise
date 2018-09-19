@@ -1,7 +1,7 @@
 import React from 'react';
-import fb from '../img/icons/fb.png';
-import linked from '../img/icons/linked.png';
-import twitter from '../img/icons/twitter.png';
+import fb from './../img/icons/fb.png';
+import linked from './../img/icons/linked.png';
+import twitter from './../img/icons/twitter.png';
 import MediaQuery from 'react-responsive';
 import { Link } from 'react-router-dom';
 
@@ -23,10 +23,17 @@ function Footer() {
       </div>
     </MediaQuery>
     <MediaQuery maxWidth={737} id='footer-wrapper-mobile'>
+      <div>
       <a href='https://www.facebook.com'><img src={fb}/></a>
       <a href='https://www.twitter.com'><img src={twitter}/></a>
       <a href='https://www.linkedin.com/in/drewtuckerdev/'><img src={linked}/></a>
+      </div>
     </MediaQuery>
+      <MediaQuery maxWidth={737} id='footer-mobile-links'>
+        <a href='#'>Legal Notice</a>
+        <a href='#'>Privacy Notice</a>
+        <p>Created by Drew Tucker 2018 All rights reserved.</p>
+      </MediaQuery>
       <style>{`
           #footer-wrapper-standard {
             display: flex;
@@ -43,6 +50,10 @@ function Footer() {
           #footer-standard-left a{
             margin: 0px 35px 0px 35px;
              text-decoration: none;
+          }
+
+          #footer-standard-left a:hover {
+            text-decoration: underline;
           }
 
           #footer-standard-right img{
@@ -72,6 +83,19 @@ function Footer() {
 
           #footer-wrapper-mobile img {
             max-height: 50px;
+          }
+
+          #footer-mobile-links {
+            display: flex;
+            justify-content: space-around;
+            font-size: 10px;
+            padding: 0px 20px 0px 20px;
+            text-align: center;
+          }
+
+          #footer-mobile-links a {
+            text-decoration: none;
+            align-self: center;
           }
 
           ul {
