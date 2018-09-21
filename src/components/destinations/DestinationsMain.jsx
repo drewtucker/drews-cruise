@@ -1,5 +1,6 @@
 import React from 'react';
 import MediaQuery from 'react-responsive';
+import { Link } from 'react-router-dom';
 import alaskaCard from './../../img/alaska-card.jpg';
 import caribbeanCard from './../../img/caribbean-card.jpg';
 import cubaCard from './../../img/cuba-card.jpg';
@@ -9,7 +10,6 @@ import hawaiiCard from './../../img/hawaii-card.jpg';
 import newEnglandCard from './../../img/new-england-card.jpg';
 import norwayCard from './../../img/norway-card.jpg';
 import thailandCard from './../../img/thailand-card.jpg';
-import { Link } from 'react-router-dom';
 
 
 const cards = { 'Alaska': alaskaCard, 'Caribbean': caribbeanCard, 'Hawaii': hawaiiCard, 'New England': newEnglandCard, 'Thailand': thailandCard, 'Norway': norwayCard, 'Cuba': cubaCard};
@@ -53,9 +53,6 @@ class DestinationsMain extends React.Component{
 
         <style>{
             `
-
-          
-
             .banner {
               align-self: center;
               z-index: 1;
