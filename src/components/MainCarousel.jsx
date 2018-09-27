@@ -95,7 +95,8 @@ class MainCarousel extends React.Component {
 }
 
 var WrapperStyles = {
-  maxWidth: '750px',  
+  maxWidth: '750px',
+  minWidth: '300px', 
   backgroundColor: 'darkgray',
   padding: '0px',
   borderRadius: '2px'

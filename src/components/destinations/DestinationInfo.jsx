@@ -25,9 +25,9 @@ class DestinationInfo extends React.Component {
   onInfoClick(e) {
     if(this.state.infoSelected === false){
       this.setState({infoSelected: true});
-      e.currentTarget.style.height = '100%';
+      e.currentTarget.style.height = '95vh';
       const description = document.getElementsByClassName('dest-description')[0];
-      description.style.cssText = 'height: 100%; display: block;';
+      description.style.cssText = 'height: 100%; display: block; overflow-y: scroll';
     }
     else {
       this.setState({infoSelected: false});
@@ -68,25 +68,34 @@ class DestinationInfo extends React.Component {
       <style>{`
         .dest-info-wrapper {
           width: 900px;
-          height: 300px;
+          height: 600px;
           display: flex;
           margin: auto;
+          overflow: hidden;
         }
         
         .dest-activities-wrapper {
           display: flex;
           justify-content: center;
+          align-items: center;
           width: 900px;
           height: 20%;
           max-width: 50vw;
           background-color: orange;
           transition: height 0.8s;
+          border-bottom-left-radius: 10px;
+          border-bottom-right-radius: 10px;
+          font-family: Montserrat, sans-serif;
+          font-size: 5vw;
         }
 
         .dest-description {
           transition: height 0.8s;
           display: none;
           height: 0%;
+          width: 100%;
+          text-align: center;
+          font-size: 2.6vw;
         }
 
         .info-box {
@@ -100,6 +109,10 @@ class DestinationInfo extends React.Component {
           background-color: darkgray;
           transition: height 1s;
           margin-bottom: 50px;
+          border-bottom-left-radius: 10px;
+          border-bottom-right-radius: 10px;
+          font-family: Montserrat, sans-serif;
+          font-size: 5vw;
         }
         
         .info-box:click {
