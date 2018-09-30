@@ -103,7 +103,7 @@ function Navbar() {
           top: 0;
           width: 100%;
           background-color:  #ffa366;
-          border-bottom: 3px solid #60989C;
+          border-bottom: 5px solid #66c1ff;
           z-index: 10;
         }
 

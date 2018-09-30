@@ -36,7 +36,7 @@ function MainBanner() {
           z-index: 3;
           color: white;
           font-size: 5vw;
-          margin-bottom: 500px;
+          margin-bottom: 450px;
           text-shadow: 1px 1px 1px black;
         }
 

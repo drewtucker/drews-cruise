@@ -27,7 +27,7 @@ class MainCarousel extends React.Component {
           </Carousel.Item>
           <Carousel.Item className='hover-trigger'>
             <Link to='/destinations'>
-            <p style={Slide2Text}>Explore with us.</p>
+            <p style={Slide2Text}>Explore with us</p>
             <div className='hover-content'>
               <p className='hover-caption'>See Destinations</p>
               <i className='material-icons'>arrow_forward_ios</i>
