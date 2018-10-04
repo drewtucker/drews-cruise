@@ -12,7 +12,7 @@ import norwayCard from './../../img/norway-card.jpg';
 import thailandCard from './../../img/thailand-card.jpg';
 
 
-const cards = { 'Alaska': alaskaCard, 'Caribbean': caribbeanCard, 'Hawaii': hawaiiCard, 'New England': newEnglandCard, 'Thailand': thailandCard, 'Norway': norwayCard, 'Cuba': cubaCard};
+const cards = { 'Alaska': alaskaCard, 'Caribbean': caribbeanCard, 'Cuba': cubaCard, 'Hawaii': hawaiiCard, 'New England': newEnglandCard, 'Thailand': thailandCard, 'Norway': norwayCard, };
 
 class DestinationsMain extends React.Component{
   render(){
@@ -34,8 +34,15 @@ class DestinationsMain extends React.Component{
       </MediaQuery>
       <MediaQuery minWidth={738} >
       <div className='banner'>
-      <p>Destinations</p>
+      <div className='banner-text-wrapper'>
+        <p>Destinations</p>
+      </div>
       <img src={destinationsBanner}/>
+      </div>
+      <div className='sub-banner'>
+        <div className='sub-banner-text'>
+          
+        </div>
       </div>
       <div className='standard'>
         {Object.keys(cards).map(card => (
@@ -43,6 +50,12 @@ class DestinationsMain extends React.Component{
           <div key={card} className='destination-card-standard'>
             <h2 className='destination-card-text'>{card}</h2>
             <img src={cards[card]} />
+            <div className='hover-content'>
+              <div className='hover-content-button'>
+                <p className='hover-content-button-text'>Explore</p>
+                <i className="material-icons">arrow_right</i>
+              </div>
+            </div>
           </div>
           </Link>
         ))}
@@ -54,38 +67,37 @@ class DestinationsMain extends React.Component{
         <style>{
             `
             .banner {
-              align-self: center;
               z-index: 1;
-              border-left: 5px solid black;
-              outline: 5px solid gray;
-              padding: 10px;
-              margin-top: 50px;
+              margin-top: 74px;
+              width: 785px;
+              height: 300px;
+              overflow: hidden;
+              border-radius: 10px;
             }
 
             .banner img {
-              max-width: 785px;
+              width: 785px;
+              height: 500px;
+              padding-bottom: 50px;
+            }
+
+            .banner-text-wrapper {
+              position: absolute;
+              width: 750px;
+              height: 300px;
+              margin: auto;
             }
 
             .banner p {
               color: white;
               font-size: 60px;
-              text-shadow: 1px 1px 1px black;
-              letter-spacing: 1.5px;
+              text-shadow: 1px 1px 20px black;
+              letter-spacing: 1px;
               font-weight: bold;
-              left: 250px;
-              top: 250px;
+              margin-left: 300px;
+              margin-top: 100px;
             }
 
-            #destinations-header {
-              display: flex;
-              justify-content: center;
-              position: relative;
-              left: 33%;
-              width: 33%;
-              border-radius: 15px;
-              color: white;
-              padding-top: 5vw;
-            }
             .flex-container {
               display: flex;
               justify-content: center;
@@ -116,12 +128,28 @@ class DestinationsMain extends React.Component{
 
             .destination-card-mobile:hover {
               opacity: 0.8;
-              border: 2px solid orange;
             }
 
             .destination-card-standard:hover {
               opacity: 0.8;
-              border: 2px solid orange;
+            }
+
+            .destination-card-standard:hover .hover-content {
+              position: absolute;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              z-index: 10;
+              width: 100%;
+            }
+            
+            .destination-card-standard:hover .hover-content-button {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              background-color: navy;
+              width: 200px;
+              height: 50px;
             }
 
             .mobile img {
@@ -166,12 +194,34 @@ class DestinationsMain extends React.Component{
               text-shadow: 1px 1px 20px black;
               font-weight: bold;
             }
-            #destinations-background {
-              background-image: url(${destinationsBG});            
-              background-position: 10% 0%;
-              height: 100%;
-              width: 100%;
-            }`}
+            
+            .hover-content {
+              display: none;
+              width: 0px;
+              transition: width 0.8s;
+              color: white;
+              text-shadow: 1px 1px 20px black;
+              font-family: Montserrat, sans-serif;
+              font-style: italic;
+              letter-spacing: 0.5px;
+            }
+            
+            .hover-content-button {
+              border-radius: 5px;
+              border: 1px solid white;
+              text-align: center;
+              width: 0px;
+              transition: width 0.8s;
+            }
+
+            .hover-content p {
+              margin: 0px;
+            }
+
+            .hover-content-button i {
+              margin-top: 3.75px;
+            }
+            `}
           </style>
         </div>
     );

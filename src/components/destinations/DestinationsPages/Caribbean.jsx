@@ -1,13 +1,11 @@
 import React from 'react';
 import DestinationPage from '../DestinationPage.jsx';
 import * as firebase from 'firebase';
-import firebaseConfig from '../../../firebase/firebaseConfig.js';
 
-firebase.initializeApp(firebaseConfig);
 var db = firebase.database();
 var storage = firebase.storage();
 
-class Alaska extends React.Component {
+class Caribbean extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -23,18 +21,18 @@ class Alaska extends React.Component {
     };
 
   }
-  
+
   componentDidMount() {
-    const descrRef = db.ref("/casimir-cruises/destinations/alaska/about");
-    const activityRef = db.ref("casimir-cruises/destinations/alaska/activities");
-    const imageRef = storage.ref("/destinationPage/alaska");
+    const descrRef = db.ref("/casimir-cruises/destinations/caribbean/about");
+    const activityRef = db.ref("casimir-cruises/destinations/caribbean/activities");
+    const imageRef = storage.ref("/destinationPage/caribbean");
     let descr = [];
     let activities = [];
     let images = [];
     // QUERY DATABASE TO RETRIEVE DESTINATION INFO AND UPDATE STATE WITH NEW DATA
     descrRef.once('value', (snapshot) => {
       descr.push(snapshot.val());
-      this.setState({description: descr[0]});
+      this.setState({ description: descr[0] });
     });
     activityRef.once('value', (snapshot) => {
       snapshot.forEach((activity) => {
@@ -48,50 +46,50 @@ class Alaska extends React.Component {
       })
     });
     //RETRIEVE CAROUSEL IMAGES
-    imageRef.child('/alaska1.jpg').getDownloadURL().then((url) => {
+    imageRef.child('/caribbean1.jpg').getDownloadURL().then((url) => {
       this.setState({
         image1: url
       })
     })
-    imageRef.child('/alaska2.jpg').getDownloadURL().then((url1) => {
-        this.setState({
-          image2: url1
-        })
+    imageRef.child('/caribbean2.jpg').getDownloadURL().then((url1) => {
+      this.setState({
+        image2: url1
       })
-    imageRef.child('/alaska3.jpg').getDownloadURL().then((url2) => {
+    })
+    imageRef.child('/caribbean3.jpg').getDownloadURL().then((url2) => {
       this.setState({
         image3: url2
       })
     })
-    imageRef.child('/alaska4.jpg').getDownloadURL().then((url3) => {
+    imageRef.child('/caribbean4.jpg').getDownloadURL().then((url3) => {
       this.setState({
         image4: url3
       })
     })
   }
-  render(){
-    
+  render() {
+
     const {
-      title = 'Alaska',
+      title = 'Caribbean',
     } = this.props;
 
     return (
-    // PROPS DISTRIBUTED TO DESTINATIONPAGE COMPONENT
-    <DestinationPage 
-      title={title} 
-      description={this.state.description} 
-      activity1={this.state.activity1} 
-      activity2={this.state.activity2}
-      activity3={this.state.activity3}
-      activity4={this.state.activity4}
-      bannerImage1={this.state.image1} 
-      bannerImage2={this.state.image2} 
-      bannerImage3={this.state.image3} 
-      bannerImage4={this.state.image4}
+      // PROPS DISTRIBUTED TO DESTINATIONPAGE COMPONENT
+      <DestinationPage
+        title={title}
+        description={this.state.description}
+        activity1={this.state.activity1}
+        activity2={this.state.activity2}
+        activity3={this.state.activity3}
+        activity4={this.state.activity4}
+        bannerImage1={this.state.image1}
+        bannerImage2={this.state.image2}
+        bannerImage3={this.state.image3}
+        bannerImage4={this.state.image4}
       />
-  )
-};
+    )
+  };
 
 }
 
-export default Alaska;
+export default Caribbean;

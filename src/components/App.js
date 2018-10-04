@@ -5,9 +5,8 @@ import Footer from './Footer';
 import HomePage from './HomePage';
 import Navbar from './Navbar';
 import Alaska from './destinations/DestinationsPages/Alaska';
-import firebase from 'firebase';
-import firebaseConfig from '../firebase/firebaseConfig';
-
+import Caribbean from './destinations/DestinationsPages/Caribbean';
+import Cuba from './destinations/DestinationsPages/Cuba';
 
 
 class App extends Component {
@@ -19,6 +18,8 @@ class App extends Component {
         <Route exact path='/' component={HomePage} />
         <Route path='/destinations' component={DestinationsMain} />
         <Route path='/Alaska' component={Alaska} title={'Alaska'}/>
+        <Route path='/Caribbean' component={Caribbean} />
+        <Route path='/Cuba' component={Cuba} />
       </Switch>
       <Footer/>
       <style jsx global> {`body { margin: 0; padding: 0;}`}</style>

@@ -20,7 +20,7 @@ class DestinationInfo extends React.Component {
     }
   }
   
-  // TOGGLES FOR SHOWING/HIDING INFO AND DESTINATIONS
+  // TOGGLES FOR SHOWING/HIDING INFO and ACTIVITIES
 
   onInfoClick(e) {
     const description = document.getElementsByClassName('dest-description')[0];
