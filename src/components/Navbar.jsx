@@ -8,27 +8,27 @@ function Navbar() {
   return <div>
       {/* STANDARD LAYOUT */}
 
-      <div class="navbar-standard">
+      <div className="navbar-standard">
         <MediaQuery minWidth={738}>
           <div id="navbar-wrapper-left">
             <Link to="/">
               <div id="navbar-logo">
-                <a>Casimir Cruises</a>
+                <p>Casimir Cruises</p>
               </div>
             </Link>
           </div>
 
           <div id="navbar-wrapper-right">
             <Link to="/destinations" className='dropdown'>
-            <div class="dropdown">
+            <div className="dropdown">
 
-              <div class="navbar-icon-wrapper">
+              <div className="navbar-icon-wrapper">
                 <a href="#">
-                  <i class="fa fa-ship" id="ship-icon" />
-                  <span class="navbar-text">Destinations</span>
+                  <i className="fa fa-ship" id="ship-icon" />
+                  <span className="navbar-text">Destinations</span>
                 </a>
               </div>
-              <div class="dropdown-content">
+              <div className="dropdown-content">
                 <Link to='/alaska'>Alaska</Link>
                 <Link to='/caribbean'>Caribbean</Link>
                 <Link to='/hawaii'>Hawaii</Link>
@@ -39,16 +39,16 @@ function Navbar() {
               </div>
             </div>
             </Link>
-            <div class="navbar-icon-wrapper">
+            <div className="navbar-icon-wrapper">
               <a href="#">
-                <i class="material-icons">question_answer</i>
-                <span class="navbar-text">Contact</span>
+                <i className="material-icons">question_answer</i>
+                <span className="navbar-text">Contact</span>
               </a>
             </div>
-            <div class="navbar-icon-wrapper">
+            <div className="navbar-icon-wrapper">
               <a href="#">
-                <i class="material-icons">person_outline</i>
-                <span class="navbar-text">Log In</span>
+                <i className="material-icons">person_outline</i>
+                <span className="navbar-text">Log In</span>
               </a>
             </div>
           </div>
@@ -57,30 +57,28 @@ function Navbar() {
 
       {/* MOBILE LAYOUT*/}
 
-      <div class="navbar-mobile">
+      <div className="navbar-mobile">
         <MediaQuery maxWidth={737}>
 
           <div id="mobile-icons-wrapper">
             <Link to="/destinations">
-              <div class="navbar-icon-wrapper">
-                <a href="#">
-                  <i class="fa fa-ship" id="ship-icon" />
-                  <span class="navbar-text">Destinations</span>
-                </a>
+              <div className="navbar-icon-wrapper">
+                  <i className="fa fa-ship" id="ship-icon" />
+                  <span className="navbar-text">Destinations</span>
               </div>
             </Link>
             
-            <div class="navbar-icon-wrapper">
+            <div className="navbar-icon-wrapper">
               <a href="#">
-                <i class="material-icons">question_answer</i>
-                <span class="navbar-text">Contact</span>
+                <i className="material-icons">question_answer</i>
+                <span className="navbar-text">Contact</span>
               </a>
             </div>
 
-            <div class="navbar-icon-wrapper">
+            <div className="navbar-icon-wrapper">
               <a href="#">
-                <i class="material-icons">person_outline</i>
-                <span class="navbar-text">Log In</span>
+                <i className="material-icons">person_outline</i>
+                <span className="navbar-text">Log In</span>
               </a>
             </div>
           </div>
@@ -88,8 +86,8 @@ function Navbar() {
       </div>
 
     <MediaQuery maxWidth={736}>
-      <Link to="/" class='mobile-sub-logo'>
-        <p class="mobile-sub-logo">Casimir Cruises</p>
+      <Link to="/" className='mobile-sub-logo'>
+        <p className="mobile-sub-logo">Casimir Cruises</p>
         <br/>
       </Link>
     </MediaQuery>

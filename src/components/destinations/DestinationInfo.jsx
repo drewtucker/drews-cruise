@@ -1,12 +1,12 @@
 import React from 'react';
 import MediaQuery from 'react-responsive';
 
-
 class DestinationInfo extends React.Component {
   
   constructor(props) {
     super(props);
       const {
+        destination,
         destDescription,
         activity1,
         activity2,

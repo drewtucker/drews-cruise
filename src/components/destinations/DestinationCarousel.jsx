@@ -1,5 +1,6 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
+import MediaQuery from 'react-responsive';
 
 class DestinationCarousel extends React.Component {
   render() {
@@ -24,6 +25,7 @@ class DestinationCarousel extends React.Component {
 
     return (
     <div>
+      <MediaQuery minWidth={400} style={{paddingTop: '100px'}}></MediaQuery>
       <p style={CarouselTitle}>{title}</p>
         <Carousel>
           <Carousel.Item>

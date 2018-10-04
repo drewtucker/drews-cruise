@@ -1,11 +1,12 @@
 import React from 'react';
 import MediaQuery from 'react-responsive';
-import Slider from 'react-slick';
 import DestinationCarousel from '../destinations/DestinationCarousel';
 import DestinationInfo from './DestinationInfo';
 
+
 class DestinationPage extends React.Component {
   render() {
+
     const {
       title = '',
       bannerImage1,
@@ -44,4 +45,6 @@ var wrapperStyles = {
   margin: 'auto',
   maxWidth: '900px',
 }
+
 export default DestinationPage;
+

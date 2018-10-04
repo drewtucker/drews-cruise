@@ -6,6 +6,7 @@ import { AppContainer } from 'react-hot-loader';
 import { HashRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
+
 const render = (Component) => {
   ReactDOM.render(
     <AppContainer>

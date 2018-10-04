@@ -5,6 +5,9 @@ import Footer from './Footer';
 import HomePage from './HomePage';
 import Navbar from './Navbar';
 import Alaska from './destinations/DestinationsPages/Alaska';
+import firebase from 'firebase';
+import firebaseConfig from '../firebase/firebaseConfig';
+
 
 
 class App extends Component {
@@ -15,7 +18,7 @@ class App extends Component {
       <Switch>
         <Route exact path='/' component={HomePage} />
         <Route path='/destinations' component={DestinationsMain} />
-        <Route path='/Alaska' component={Alaska} />
+        <Route path='/Alaska' component={Alaska} title={'Alaska'}/>
       </Switch>
       <Footer/>
       <style jsx global> {`body { margin: 0; padding: 0;}`}</style>

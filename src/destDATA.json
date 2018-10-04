@@ -1,0 +1,73 @@
+{
+  "casimir-cruises": {
+    "destinations": {
+      "alaska": {
+        "about": "",
+        "activities": {
+          "activity1": "test data",
+          "activity2": "test data 2",
+          "activity3": "",
+          "activity4": ""
+        }
+      },
+      "caribbean": {
+        "about": "",
+        "activities": {
+          "activity1": "test data",
+          "activity2": "test data 2",
+          "activity3": "",
+          "activity4": ""
+        }
+      },
+      "cuba": {
+        "about": "",
+        "activities": {
+          "activity1": "test data",
+          "activity2": "test data 2",
+          "activity3": "",
+          "activity4": ""
+        }
+      },
+      "hawaii": {
+        "about": "",
+        "activities": {
+          "activity1": "test data",
+          "activity2": "test data 2",
+          "activity3": "",
+          "activity4": ""
+        }
+      },
+      "new_england": {
+        "about": "",
+        "activities": {
+          "activity1": "test data",
+          "activity2": "test data 2",
+          "activity3": "",
+          "activity4": ""
+        }
+      },
+      "norway": {
+        "about": "",
+        "activities": {
+          "activity1": "test data",
+          "activity2": "test data 2",
+          "activity3": "",
+          "activity4": ""
+        }
+      },
+      "new_zealand": {
+        "about": "",
+        "activities": {
+          "activity1": "test data",
+          "activity2": "test data 2",
+          "activity3": "",
+          "activity4": ""
+        }
+      }
+    },
+    "users": {
+      "username": "",
+      "password": ""
+    }
+  }
+}
