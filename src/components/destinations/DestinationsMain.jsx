@@ -41,7 +41,7 @@ class DestinationsMain extends React.Component{
       </div>
       <div className='sub-banner'>
         <div className='sub-banner-text'>
-          
+          <p>Oh, where to go?</p>
         </div>
       </div>
       <div className='standard'>
@@ -133,35 +133,17 @@ class DestinationsMain extends React.Component{
             .destination-card-standard:hover {
               opacity: 0.8;
             }
-
-            .destination-card-standard:hover .hover-content {
-              position: absolute;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              z-index: 10;
-              width: 100%;
-            }
             
-            .destination-card-standard:hover .hover-content-button {
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              background-color: navy;
-              width: 200px;
-              height: 50px;
-            }
-
             .mobile img {
               max-height: 175px;
               width: 300px;
             }
-
+            
             .standard img {
               max-height: 175px;
               width: 50vw;
             }
-
+            
             .standard {
               display: flex;
               flex-wrap: wrap;
@@ -173,7 +155,7 @@ class DestinationsMain extends React.Component{
               margin-top: 20px;
               margin-bottom: 20px;
             }
-
+            
             .destination-card-standard {
               display: flex;
               justify-content: center;
@@ -185,7 +167,7 @@ class DestinationsMain extends React.Component{
               z-index: 0;
               border: 0.5px solid gray;
             }
-
+            
             .destination-card-text {
               margin: 0;
               z-index: 1;
@@ -198,7 +180,7 @@ class DestinationsMain extends React.Component{
             .hover-content {
               display: none;
               width: 0px;
-              transition: width 0.8s;
+              transition: all 0.8s;
               color: white;
               text-shadow: 1px 1px 20px black;
               font-family: Montserrat, sans-serif;
@@ -207,19 +189,55 @@ class DestinationsMain extends React.Component{
             }
             
             .hover-content-button {
+              background-color: navy;
               border-radius: 5px;
               border: 1px solid white;
               text-align: center;
               width: 0px;
-              transition: width 0.8s;
+              height: 0px;
+              transition: height 0.8s, width 0.8s;
             }
-
+            
             .hover-content p {
               margin: 0px;
+              height: 0px;
+              width: 0px;
+              transition: height 0.8s, width 0.8s;
             }
-
+            
             .hover-content-button i {
               margin-top: 3.75px;
+              height: 0px; 
+              width: 0px;
+              transition: height 0.8s, width 0.8s;
+            }
+
+            .destination-card-standard:hover .hover-content {
+              position: absolute;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              z-index: 10;
+              width: 350px;
+              height: 175px;
+            }
+          
+           .destination-card-standard:hover .hover-content-button {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 200px;
+              height: 50px;
+            }
+
+            .destination-card-standard:hover .hover-content-button-text {
+              width: auto;
+              height: auto;
+            }
+
+            .destination-card-standard:hover .hover-content-button i {
+              width: auto;
+              height: auto;
             }
             `}
           </style>

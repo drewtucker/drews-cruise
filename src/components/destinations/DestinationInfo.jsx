@@ -25,15 +25,20 @@ class DestinationInfo extends React.Component {
   onInfoClick(e) {
     const description = document.getElementsByClassName('dest-description')[0];
     const title = document.getElementsByClassName('dest-description-title')[0];
+    const wrapper = document.getElementsByClassName('dest-info-wrapper')[0];
     if(this.state.infoSelected === false){
       this.setState({infoSelected: true});
       e.currentTarget.style.height = '95vh';
-      description.style.cssText = 'height: 100%; display: block; overflow-y: scroll;' ;
+      wrapper.style.cssText = 'height: 600px; margin-bottom: 50px;';
+      description.style.cssText = 'height: 600px; display: block; overflow-y: scroll;' ;
       title.style.cssText = 'font-weight: bold;';
     }
     else {
       this.setState({infoSelected: false});
-      e.currentTarget.style.height = '10%';
+      e.currentTarget.style.height = '50px';
+      if(this.state.activitiesSelected != true){
+        wrapper.style.height = '200px';
+      }
       description.style.cssText = 'height: 0%;';
       title.style.cssText = 'font-weight: normal;';
     }
@@ -42,15 +47,20 @@ class DestinationInfo extends React.Component {
   onActivitiesClick(e) {
     const title = document.getElementsByClassName('dest-activities-title')[0];
     const bullets = document.getElementsByClassName('dest-activities-bullet-wrapper')[0];
+    const wrapper = document.getElementsByClassName('dest-info-wrapper')[0];
     if(this.state.activitiesSelected === false){
       this.setState({activitiesSelected: true});
-      e.currentTarget.style.height = '100%';
+      e.currentTarget.style.height = '600px';
+      wrapper.style.height = '600px';
       bullets.style.cssText = 'display: flex; flex-direction: column;';
       title.style.cssText = 'font-weight: bold;';
     }
     else { 
       this.setState({activitiesSelected: false});
-      e.currentTarget.style.height = '15%';
+      e.currentTarget.style.height = '70px';
+      if(this.state.infoSelected != true) {
+        wrapper.style.height = '200px';
+      }
       bullets.style.cssText = 'display: none;';
       title.style.cssText = 'font-weight: normal;';
     }
@@ -166,10 +176,11 @@ class DestinationInfo extends React.Component {
 
         .dest-info-wrapper {
           width: 900px;
-          height: 600px;
+          height: 200px;
           display: flex;
           margin: auto;
           overflow: hidden;
+          transition: height 1s;
         }
         
         .dest-activities-wrapper {
@@ -178,7 +189,7 @@ class DestinationInfo extends React.Component {
           justify-content: center;
           align-items: center;
           width: 900px;
-          height: 15%;
+          height: 70px;
           max-width: 50vw;
           background-color: #79BA67;
           transition: height 0.8s;
@@ -202,7 +213,7 @@ class DestinationInfo extends React.Component {
         }
 
         .dest-description {
-          transition: height 0.8s;
+          transition: height 1s;
           display: none;
           height: 0%;
           width: 100%;
@@ -220,7 +231,7 @@ class DestinationInfo extends React.Component {
           align-items: center;
           justify-content: center;
           width: 900px;
-          height: 10%;
+          height: 50px;
           max-width: 50vw;
           background-color: #EDDE8F;
           transition: height 1s;

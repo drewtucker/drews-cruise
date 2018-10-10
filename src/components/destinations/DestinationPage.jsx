@@ -2,7 +2,7 @@ import React from 'react';
 import MediaQuery from 'react-responsive';
 import DestinationCarousel from '../destinations/DestinationCarousel';
 import DestinationInfo from './DestinationInfo';
-
+import Modal from './Modal';
 
 class DestinationPage extends React.Component {
   render() {
@@ -28,11 +28,20 @@ class DestinationPage extends React.Component {
         <DestinationCarousel title={title} image1={bannerImage1} image2={bannerImage2} image3={bannerImage3} image4={bannerImage4} />
         </div>
           <DestinationInfo destDescription={description} activity1={activity1} activity2={activity2} activity3={activity3} activity4={activity4} />
+          <div className='modal-centering'>
+            <Modal/>
+          </div>
       </MediaQuery>
       <style>{`
 
         #dest-wrapper-standard {
           background-color: white;
+        }
+
+        .modal-centering {
+          display: flex;
+          justify-content: center;
+          margin-bottom: 100px;
         }
 
       `}</style>
@@ -45,6 +54,7 @@ var wrapperStyles = {
   margin: 'auto',
   maxWidth: '900px',
 }
+
 
 export default DestinationPage;
 
