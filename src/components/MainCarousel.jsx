@@ -2,6 +2,7 @@ import React from 'react';
 import Slider from 'react-slick';
 import slide1 from './../img/carousel/italy.jpg';
 import slide2 from './../img/carousel/globe.jpg';
+import award from './../img/icons/award.png';
 import { Link } from 'react-router-dom';
 import MediaQuery from 'react-responsive';
 import { Carousel } from 'react-bootstrap';
@@ -19,6 +20,7 @@ class MainCarousel extends React.Component {
       <Carousel {...CarouselSettings}>
           <Carousel.Item>
             <p style={Slide1Text}></p>
+            <img className='award' src={award} />
             <img  src={slide1} />
             <Carousel.Caption>
               <h3></h3>
@@ -87,6 +89,14 @@ class MainCarousel extends React.Component {
             bottom: 45%;
             color: white;
             font-size: 15px;
+          }
+
+          .award {
+            width: 30vw;
+            z-index: 10;
+            position: absolute;
+            right: 30px;
+            top: 20px;
           }
       `}</style>
       </div>

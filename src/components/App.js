@@ -7,7 +7,8 @@ import Navbar from './Navbar';
 import Alaska from './destinations/DestinationsPages/Alaska';
 import Caribbean from './destinations/DestinationsPages/Caribbean';
 import Cuba from './destinations/DestinationsPages/Cuba';
-
+import Hawaii from './destinations/DestinationsPages/Hawaii';
+import NewEngland from './destinations/DestinationsPages/NewEngland';
 
 class App extends Component {
   render() {
@@ -20,6 +21,8 @@ class App extends Component {
         <Route path='/Alaska' component={Alaska} title={'Alaska'}/>
         <Route path='/Caribbean' component={Caribbean} />
         <Route path='/Cuba' component={Cuba} />
+        <Route path='/Hawaii' component={Hawaii} />
+        <Route path='/New England' component={NewEngland} />
       </Switch>
       <Footer/>
       <style jsx global> {`body { margin: 0; padding: 0;}`}</style>
