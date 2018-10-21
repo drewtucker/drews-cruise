@@ -9,6 +9,9 @@ import Caribbean from './destinations/DestinationsPages/Caribbean';
 import Cuba from './destinations/DestinationsPages/Cuba';
 import Hawaii from './destinations/DestinationsPages/Hawaii';
 import NewEngland from './destinations/DestinationsPages/NewEngland';
+import NewZealand from './destinations/DestinationsPages/NewZealand';
+import Norway from './destinations/DestinationsPages/Norway';
+
 
 class App extends Component {
   render() {
@@ -23,6 +26,8 @@ class App extends Component {
         <Route path='/Cuba' component={Cuba} />
         <Route path='/Hawaii' component={Hawaii} />
         <Route path='/New England' component={NewEngland} />
+        <Route path='/New Zealand' component={NewZealand} />
+        <Route path='/Norway' component={Norway} />
       </Switch>
       <Footer/>
       <style jsx global> {`body { margin: 0; padding: 0;}`}</style>

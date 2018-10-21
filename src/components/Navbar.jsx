@@ -2,7 +2,7 @@ import React from 'react';
 import MediaQuery from 'react-responsive';
 import { Link } from 'react-router-dom';
 import firebase from 'firebase';
-
+import boatImg from '../img/icons/boat.png';
 
 class Navbar extends React.Component {
 
@@ -76,6 +76,7 @@ class Navbar extends React.Component {
                 <p>Casimir Cruises</p>
               </div>
             </Link>
+            <img src={boatImg} className='boat-icon' />
           </div>
 
           <div id="navbar-wrapper-right">
@@ -91,11 +92,12 @@ class Navbar extends React.Component {
                 <div className="dropdown-content">
                   <Link to='/alaska'>Alaska</Link>
                   <Link to='/caribbean'>Caribbean</Link>
+                  <Link to='/cuba'>Cuba</Link>
                   <Link to='/hawaii'>Hawaii</Link>
                   <Link to={'/new england'}>New England</Link>
-                  <Link to='/thailand'>Thailand</Link>
+                  <Link to={'/new zealand'}>New Zealand</Link>
                   <Link to='/norway'>Norway</Link>
-                  <Link to='/cuba'>Cuba</Link>
+                  <Link to='/thailand'>Thailand</Link>
                 </div>
               </div>
             </Link>
@@ -116,6 +118,8 @@ class Navbar extends React.Component {
         <MediaQuery maxWidth={737}>
 
           <div id="mobile-icons-wrapper">
+            <Link to='/'><img src={boatImg} className='boat-icon-mobile' /> </Link>
+
             <Link to="/destinations">
               <div className="navbar-icon-wrapper">
                 <i className="fa fa-ship" id="ship-icon" />
@@ -280,6 +284,9 @@ class Navbar extends React.Component {
   box-shadow: 4px 8px 16px 0px rgba(0,0,0,0.2);
   border-radius: 1px;
   max-height: 0px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+
 }
 
 .dropdown-content a {
@@ -298,13 +305,25 @@ class Navbar extends React.Component {
 }
 
 .dropdown:hover .dropdown-content {
+  margin-top: 10px;
   display: block;
   max-height: 800px;
   z-index: 5;
 }
 
-.dropdown: hover {
-  
+.boat-icon {
+  max-height: 40px;
+  margin: auto;
+  position: absolute;
+  bottom: -8px;
+  left: 240px;
+}
+
+.boat-icon-mobile {
+  max-height: 40px;
+  margin: auto;
+  margin-right: 10px;
+  margin-top: 6px;
 }
 
 

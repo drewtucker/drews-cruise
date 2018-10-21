@@ -8,11 +8,12 @@ import destinationsBanner from './../../img/destinations-banner.jpg';
 import destinationsBG from './../../img/destinations-bg.jpg';
 import hawaiiCard from './../../img/hawaii-card.jpg';
 import newEnglandCard from './../../img/new-england-card.jpg';
+import newZealandCard from './../../img/new-zealand-card.jpg';
 import norwayCard from './../../img/norway-card.jpg';
 import thailandCard from './../../img/thailand-card.jpg';
 
 
-const cards = { 'Alaska': alaskaCard, 'Caribbean': caribbeanCard, 'Cuba': cubaCard, 'Hawaii': hawaiiCard, 'New England': newEnglandCard, 'Thailand': thailandCard, 'Norway': norwayCard, };
+const cards = { 'Alaska': alaskaCard, 'Caribbean': caribbeanCard, 'Cuba': cubaCard, 'Hawaii': hawaiiCard, 'New England': newEnglandCard, 'New Zealand': newZealandCard, 'Norway': norwayCard, 'Thailand': thailandCard,  };
 
 class DestinationsMain extends React.Component{
   render(){

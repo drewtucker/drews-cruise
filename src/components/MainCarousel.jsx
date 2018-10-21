@@ -12,14 +12,13 @@ class MainCarousel extends React.Component {
 
     var CarouselSettings = {
       controls: false,
-      interval: null,
+      interval: 8000,
     }
 
     return(
       <div style={WrapperStyles}>
       <Carousel {...CarouselSettings}>
           <Carousel.Item>
-            <p style={Slide1Text}></p>
             <img className='award' src={award} />
             <img  src={slide1} />
             <Carousel.Caption>
@@ -121,13 +120,11 @@ var Slide2Text = {
   position: 'fixed',
   width: '100%',
   margin: 'auto',
-  top: '7%',
-  right: '5%',
-  fontSize: '40px',
+  fontSize: '5em',
   color: 'white',
   textShadow: '1px 1px 2px black',
-  fontFamily: 'Montserrat, sans-serif',
-  
+  fontFamily: 'tempo, sans-serif',
+  fontWeight: 'bold',
   textAlign: 'center',
 }
 
