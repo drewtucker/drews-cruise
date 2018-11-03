@@ -42,7 +42,7 @@ class DestinationsMain extends React.Component{
       </div>
       <div className='sub-banner'>
         <div className='sub-banner-text'>
-          <p>Oh, where to go?</p>
+            <p>Where to go?</p>
         </div>
       </div>
       <div className='standard'>
@@ -68,12 +68,12 @@ class DestinationsMain extends React.Component{
         <style>{
             `
             .banner {
-              z-index: 1;
+              z-index: 0;
               margin-top: 74px;
               width: 785px;
               height: 300px;
               overflow: hidden;
-              border-radius: 10px;
+              border-radius: 2px;
             }
 
             .banner img {
@@ -99,11 +99,28 @@ class DestinationsMain extends React.Component{
               margin-top: 100px;
             }
 
+            .sub-banner {
+              margin: 20px;
+              padding: 10px;
+              border-radius: 2px;
+              z-index: 0;
+            }
+
+            .sub-banner-text {
+              color: #29293d;
+              letter-spacing: 0.1px;
+              font-size: 2.5rem;
+              font-weight: bold;
+              font-family: Montserrat, sans-serif;
+            }
+
             .flex-container {
               display: flex;
               justify-content: center;
               align-items: center;
               flex-direction: column;
+              background-image: linear-gradient(to bottom, white, #b3e0ff);
+              z-index: 0;
             }
 
             .mobile {
@@ -182,15 +199,16 @@ class DestinationsMain extends React.Component{
               display: none;
               width: 0px;
               transition: all 0.8s;
-              color: white;
+              color: black;
               text-shadow: 1px 1px 20px black;
               font-family: Montserrat, sans-serif;
               font-style: italic;
+              font-weight: bold;
               letter-spacing: 0.5px;
             }
             
             .hover-content-button {
-              background-color: navy;
+              background-color: #fff166;
               border-radius: 5px;
               border: 1px solid white;
               text-align: center;

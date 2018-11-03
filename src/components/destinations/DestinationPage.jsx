@@ -29,7 +29,7 @@ class DestinationPage extends React.Component {
         </div>
           <DestinationInfo destDescription={description} activity1={activity1} activity2={activity2} activity3={activity3} activity4={activity4} />
           <div className='modal-centering'>
-            <Modal/>
+          <Modal />
           </div>
       </MediaQuery>
       <style>{`

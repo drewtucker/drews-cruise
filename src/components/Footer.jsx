@@ -41,7 +41,7 @@ function Footer() {
             bottom: 0;
             justify-content: space-between;
             align-items: center;
-            background-color: #ffa366;
+            background-color: #29293d;
             color: white;
             opacity: 1;
             flex-wrap: nowrap;
@@ -77,7 +77,7 @@ function Footer() {
             padding: 5px;
             justify-content: space-around;
             bottom: 0;
-            background-color: #ffa366;
+            background-color: #29293d;
             z-index: 4;
           }
 

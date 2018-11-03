@@ -140,6 +140,12 @@ class DestinationInfo extends React.Component {
           margin-top: 10px;
         }
 
+        .mobile-info-about {
+          font-weight: bold;
+          font-family: Montserrat, sans-serif;
+
+        }
+
         .mobile-activities-wrapper {
           height: 50%;
           width: 100%;
@@ -148,6 +154,8 @@ class DestinationInfo extends React.Component {
           flex-direction: column;
           justify-content: center;
           align-items: center;
+          font-family: Montserrat, sans-serif;
+
         }
 
         .mobile-activities-title {
@@ -162,16 +170,13 @@ class DestinationInfo extends React.Component {
           font-weight: bold;
           margin-top: 10px;
         }
-
-        .mobile-activities-bullet-wrapper {
-        }
         
         .mobile-activities-bullet {
-          list-style-type: circle;
+          list-style-type: square;
           justify-content: space-around;
           font-size: 1.1rem;
+          font-weight: bold;
           margin: 20px 0px 20px 0px;
-          
         }
 
         .dest-info-wrapper {
@@ -204,7 +209,8 @@ class DestinationInfo extends React.Component {
           display: none;
           justify-content: space-around;
           font-size: 1.2rem;
-          list-style-type: circle;
+          font-weight: bold;
+          list-style-type: square;
           height: 100%;
         }
 
@@ -219,6 +225,8 @@ class DestinationInfo extends React.Component {
           width: 100%;
           text-align: center;
           font-size: 1rem;
+          font-weight: bold;
+
         }
 
         .dest-description-title:hover {
@@ -235,7 +243,6 @@ class DestinationInfo extends React.Component {
           max-width: 50vw;
           background-color: #EDDE8F;
           transition: height 1s;
-          margin-bottom: 50px;
           border-bottom-left-radius: 40px;
           font-family: Montserrat, sans-serif;
           font-size: 2rem;

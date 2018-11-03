@@ -151,6 +151,8 @@ class Navbar extends React.Component {
         </Link>
       </MediaQuery>
 
+{/* // #ffa366 */}
+
       <style>{`
 
 .navbar-standard {
@@ -159,7 +161,7 @@ class Navbar extends React.Component {
   position: absolute;
   top: 0;
   width: 100%;
-  background-color:  #ffa366;
+  background-color: #29293d;
   border-bottom: 5px solid #66c1ff;
   z-index: 10;
 }
@@ -170,7 +172,7 @@ class Navbar extends React.Component {
   position: absolute;
   top: 0;
   width: 100%;
-  background-color:  #ffa366;
+  background-color:  #29293d;
   color: white;
   text-decoration: none;
   z-index: 10;
@@ -194,7 +196,7 @@ class Navbar extends React.Component {
   justify-content: center;
   text-decoration: none;
   color: white;
-  background-color: darkgray;
+  background-color: #29293d;
   font-family: Cinzel, serif;
 }
 
@@ -202,7 +204,7 @@ class Navbar extends React.Component {
   display: flex;
   justify-content: space-between;
   
-  background-color:  #ffa366;
+  background-color:  #29293d;
   padding: 3px 0px 3px 0px;
 }
 
@@ -280,12 +282,10 @@ class Navbar extends React.Component {
   position: absolute;
   background-color: #c9c9c9;
   width: 100px;
-  z-index: 4;
+  z-index: 1000;
   box-shadow: 4px 8px 16px 0px rgba(0,0,0,0.2);
   border-radius: 1px;
   max-height: 0px;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
 
 }
 
@@ -300,7 +300,8 @@ class Navbar extends React.Component {
 }
 
 .dropdown-content a:hover {
-  background-color: #60989C;
+  background-color: slategray;
+  color: white;
   transition: .15s ease-out;
 }
 
@@ -308,7 +309,7 @@ class Navbar extends React.Component {
   margin-top: 10px;
   display: block;
   max-height: 800px;
-  z-index: 5;
+  z-index: 1000;
 }
 
 .boat-icon {

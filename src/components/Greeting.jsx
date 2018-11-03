@@ -20,6 +20,7 @@ function Greeting() {
           background-color: lightgray;
           margin: 50px;
           text-align: center;
+          font-family: Montserrat, sans-serif;
         }
       `}</style>
     </div>
