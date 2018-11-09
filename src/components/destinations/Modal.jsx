@@ -45,8 +45,8 @@ class Modal extends React.Component {
     }
     else {
       this.setState({ selected: false });
-      wrapper.style.cssText = 'height: 100px; width: 100px; transition: all .5s; ';
-      wrapper.style.width = 'inherit';
+      wrapper.style.cssText = 'height: 100px; width: 150px; :hover {width: 200px;}';
+      wrapper.style.cssText = '';
       modalButtonText.style.cssText = 'display: block;';
       modalContentWrapper.style.cssText = 'display: none;';
       modalExitIcon.style.cssText = 'display: none;'
@@ -135,7 +135,7 @@ class Modal extends React.Component {
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 100px;
+            width: 150px;
             height: 100px;
             background-color: #29293d;
             transition: all .5s;

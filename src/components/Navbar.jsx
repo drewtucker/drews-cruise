@@ -237,6 +237,7 @@ class Navbar extends React.Component {
   color: #60989C;
   opacity: 1;
   border-radius: 2px;
+  z-index: 50;
 }
 
 #navbar-wrapper-right a {
@@ -297,6 +298,7 @@ class Navbar extends React.Component {
   text-decoration: none;
   display: block;
   text-align: center;
+  z-index: 3000;
 }
 
 .dropdown-content a:hover {
@@ -306,7 +308,6 @@ class Navbar extends React.Component {
 }
 
 .dropdown:hover .dropdown-content {
-  margin-top: 10px;
   display: block;
   max-height: 800px;
   z-index: 1000;

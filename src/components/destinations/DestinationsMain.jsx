@@ -120,7 +120,7 @@ class DestinationsMain extends React.Component{
               align-items: center;
               flex-direction: column;
               background-image: linear-gradient(to bottom, white, #b3e0ff);
-              z-index: 0;
+              z-index: -1000;
             }
 
             .mobile {
