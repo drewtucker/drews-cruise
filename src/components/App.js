@@ -14,6 +14,8 @@ import Norway from './destinations/DestinationsPages/Norway';
 import Contact from './Contact';
 import Legal from './Legal';
 import Privacy from './Privacy';
+import MobileBooking from './destinations/MobileBooking';
+
 class App extends Component {
   render() {
     return (
@@ -32,6 +34,7 @@ class App extends Component {
         <Route path='/contact' component={Contact} />
         <Route path='/legal' component={Legal} />
         <Route path='/privacy' component={Privacy} />
+        <Route path='/book' component={MobileBooking} />
       </Switch>
       <Footer/>
       <style jsx global> {`body { margin: 0; padding: 0;}`}</style>

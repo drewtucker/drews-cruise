@@ -1,7 +1,7 @@
 import React from 'react';
 import MediaQuery from 'react-responsive';
 import Calendar from 'react-calendar';
-
+import { Link } from 'react-router-dom';
 
 class Modal extends React.Component {
   constructor(props) {
@@ -148,8 +148,10 @@ class Modal extends React.Component {
         </MediaQuery>
         <MediaQuery maxWidth={400}>
           <div className='mobile-button'>
+          <Link to='/book' >
             <p className='mobile-button-text'>Book It!</p>
-          </div>
+          </Link>
+        </div>
         </MediaQuery>
         <style>{`
           .modal-wrapper {
