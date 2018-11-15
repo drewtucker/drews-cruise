@@ -66,7 +66,6 @@ class DestinationInfo extends React.Component {
     }
   }
 
-
   render() {
     return (
       <div>

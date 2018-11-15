@@ -5,6 +5,7 @@ import DestinationInfo from './DestinationInfo';
 import Modal from './Modal';
 
 class DestinationPage extends React.Component {
+
   render() {
 
     const {
