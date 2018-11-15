@@ -12,9 +12,9 @@ function Footer() {
   <div>
       <MediaQuery minWidth={738} id='footer-wrapper-standard'>
       <div id='footer-standard-left'>
-        <Link to='/'>Legal Notices</Link>
-        <Link to='/'>Privacy Notice</Link>
-        <Link to='/'>Contact Us</Link>
+        <Link to='/legal'>Legal Notices</Link>
+        <Link to='/privacy'>Privacy Notice</Link>
+        <Link to='/contact'>Contact Us</Link>
       </div>
       <div id='footer-standard-right'>
         <a href='https://www.facebook.com'><img src={fb}/></a>
@@ -30,8 +30,8 @@ function Footer() {
       </div>
     </MediaQuery>
       <MediaQuery maxWidth={737} id='footer-mobile-links'>
-        <a href='#'>Legal Notice</a>
-        <a href='#'>Privacy Notice</a>
+        <Link to='/legal'>Legal Notice</Link>
+        <Link to='/privacy'>Privacy Notice</Link>
         <p>Created by Drew Tucker 2018 All rights reserved.</p>
       </MediaQuery>
       <style>{`

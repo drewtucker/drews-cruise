@@ -102,10 +102,10 @@ class Navbar extends React.Component {
               </div>
             </Link>
             <div className="navbar-icon-wrapper">
-              <a href="#">
+              <Link to="/contact">
                 <i className="material-icons">question_answer</i>
                 <span className="navbar-text">Contact</span>
-              </a>
+              </Link>
             </div>
             {signInIcon}
           </div>
@@ -128,18 +128,13 @@ class Navbar extends React.Component {
             </Link>
 
             <div className="navbar-icon-wrapper">
-              <a href="#">
+              <Link to="/contact">
                 <i className="material-icons">question_answer</i>
                 <span className="navbar-text">Contact</span>
-              </a>
+              </Link>
             </div>
 
-            <div className="navbar-icon-wrapper">
-              <a href="#">
-                <i className="material-icons">person_outline</i>
-                <span className="navbar-text">Log In</span>
-              </a>
-            </div>
+            {signInIcon}
           </div>
         </MediaQuery>
       </div>

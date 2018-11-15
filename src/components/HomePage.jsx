@@ -30,7 +30,7 @@ var homePageStyles = {
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
-  backgroundColor: 'lightgray'
+  backgroundColor: '#e3f2ff'
 }
 
 var CarouselStyles = {

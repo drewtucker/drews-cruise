@@ -16,11 +16,13 @@ function Greeting() {
           flex-direction: column;
           justify-content: space-between;
           width: 300px;
-          height: 400px;
-          background-color: lightgray;
+          height: 500px;
+          background-color: #e3f2ff;
           margin: 50px;
           text-align: center;
           font-family: Montserrat, sans-serif;
+          font-weight: bold;
+          font-size: 1.2rem;
         }
       `}</style>
     </div>

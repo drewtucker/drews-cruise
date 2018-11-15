@@ -11,8 +11,9 @@ import Hawaii from './destinations/DestinationsPages/Hawaii';
 import NewEngland from './destinations/DestinationsPages/NewEngland';
 import NewZealand from './destinations/DestinationsPages/NewZealand';
 import Norway from './destinations/DestinationsPages/Norway';
-
-
+import Contact from './Contact';
+import Legal from './Legal';
+import Privacy from './Privacy';
 class App extends Component {
   render() {
     return (
@@ -28,6 +29,9 @@ class App extends Component {
         <Route path='/New England' component={NewEngland} />
         <Route path='/New Zealand' component={NewZealand} />
         <Route path='/Norway' component={Norway} />
+        <Route path='/contact' component={Contact} />
+        <Route path='/legal' component={Legal} />
+        <Route path='/privacy' component={Privacy} />
       </Switch>
       <Footer/>
       <style jsx global> {`body { margin: 0; padding: 0;}`}</style>

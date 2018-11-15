@@ -16,6 +16,11 @@ import thailandCard from './../../img/thailand-card.jpg';
 const cards = { 'Alaska': alaskaCard, 'Caribbean': caribbeanCard, 'Cuba': cubaCard, 'Hawaii': hawaiiCard, 'New England': newEnglandCard, 'New Zealand': newZealandCard, 'Norway': norwayCard, 'Thailand': thailandCard,  };
 
 class DestinationsMain extends React.Component{
+
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
+
   render(){
     const {
       route,
@@ -119,7 +124,7 @@ class DestinationsMain extends React.Component{
               justify-content: center;
               align-items: center;
               flex-direction: column;
-              background-image: linear-gradient(to bottom, white, #b3e0ff);
+              background-color: #e3f2ff;
               z-index: -1000;
             }
 
@@ -144,13 +149,7 @@ class DestinationsMain extends React.Component{
               border: 0.5px solid gray;
             }
 
-            .destination-card-mobile:hover {
-              opacity: 0.8;
-            }
-
-            .destination-card-standard:hover {
-              opacity: 0.8;
-            }
+            
             
             .mobile img {
               max-height: 175px;
@@ -229,6 +228,12 @@ class DestinationsMain extends React.Component{
               height: 0px; 
               width: 0px;
               transition: height 0.8s, width 0.8s;
+            }
+
+            .hover-content-button:hover {
+              background-color: #29293d;
+              color: white;
+              opacity: 1;
             }
 
             .destination-card-standard:hover .hover-content {

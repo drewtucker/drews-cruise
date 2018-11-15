@@ -12,12 +12,10 @@ class Modal extends React.Component {
       selected: false,
       price: 0,
       total: 0,
-      dates: [new Date(), new Date()],
       basicSelected: false,
       suiteSelected: false,
       presidentialSelected: false,
-      startDay: Date(),
-      endDay: Date(),
+      confirmed: false,
     }
   }
 
@@ -28,7 +26,6 @@ class Modal extends React.Component {
     const modalContentCenter = document.getElementsByClassName('modal-content-center')[0];
     const modalContentLeft = document.getElementsByClassName('modal-content-left')[0];
     const modalContentRight = document.getElementsByClassName('modal-content-right')[0];
-    const modalCalendars = document.getElementsByClassName('modal-calendars')[0];
     const modalExitIcon = document.getElementById('modal-exit-icon');
 
     if (this.state.selected === false) {
@@ -39,14 +36,12 @@ class Modal extends React.Component {
       modalContentCenter.style.cssText = 'display: flex; justify-content: center; align-items: center; flex-direction: column; height: 100%; width: 350px;';
       modalContentLeft.style.cssText = 'display: flex;';
       modalContentRight.style.cssText = 'display: flex;';
-      modalCalendars.style.cssText = '';
       modalExitIcon.style.cssText = 'display: block;'
 
     }
     else {
-      this.setState({ selected: false });
+      this.setState({ selected: false, confirmed: false, });
       wrapper.style.cssText = 'height: 100px; width: 150px; :hover {width: 200px;}';
-      wrapper.style.cssText = '';
       modalButtonText.style.cssText = 'display: block;';
       modalContentWrapper.style.cssText = 'display: none;';
       modalExitIcon.style.cssText = 'display: none;'
@@ -70,6 +65,27 @@ class Modal extends React.Component {
     })
 
   }
+
+  handleConfirmation(e) {
+    const wrapper = document.getElementsByClassName('modal-wrapper')[0];
+    const modalButtonText = document.getElementById('modal-button-text');
+    const modalContentWrapper = document.getElementsByClassName('modal-content-wrapper')[0];
+    const modalContentLeft = document.getElementsByClassName('modal-content-left')[0];
+    const modalContentRight = document.getElementsByClassName('modal-content-right')[0];
+    const modalCalendars = document.getElementsByClassName('modal-calendars')[0];
+    const modalExitIcon = document.getElementById('modal-exit-icon');
+    if(this.state.confirmed === false){
+      this.setState({confirmed: true});
+      wrapper.style.cssText = 'height: 150px; width: 250px; cursor: auto; :hover #modal-button-text {color: white;}';
+      modalButtonText.style.cssText = 'display: block;';
+      modalButtonText.innerHTML = 'Confirmed!';
+      modalContentWrapper.style.cssText = 'display: none;';
+      modalContentLeft.style.cssText = 'display: none;';
+      modalContentRight.style.cssText = 'display: none;';
+      modalCalendars.style.cssText = 'display: none;';
+      modalExitIcon.style.cssText = 'display: none;'
+  }
+}
 
   render() {
 
@@ -118,16 +134,21 @@ class Modal extends React.Component {
                 <div className='modal-calendars'>
                   <Calendar selectRange={true} returnValue={'range'} onChange={this.handleDates.bind(this)} />
                 </div>
-                <div id='confirmation-button'>
+                <div id='confirmation-button' onClick={this.handleConfirmation.bind(this)}>
                   <p>Confirm</p>
                 </div>
               </div>
 
               {/* PRICE DISPLAY */}
               <div className='modal-content-right'>
-                <p>Total: $ {this.state.total}</p>
+                <p>Total: $ {this.state.total + ".00"}</p>
               </div>
             </div>
+          </div>
+        </MediaQuery>
+        <MediaQuery maxWidth={400}>
+          <div className='mobile-button'>
+            <p className='mobile-button-text'>Book It!</p>
           </div>
         </MediaQuery>
         <style>{`
@@ -145,6 +166,23 @@ class Modal extends React.Component {
           }
 
           #modal-button-text {
+            color: white;
+            font-size: 2rem;
+            text-align: center;
+            font-family: Montserrat, sans-serif;
+          }
+
+          .mobile-button {
+            display: flex;
+            width: 300px;
+            height: 100px;
+            background-color: #29293d;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+          }
+
+          .mobile-button-text {
             color: white;
             font-size: 2rem;
             text-align: center;

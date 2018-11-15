@@ -35,13 +35,13 @@ class DestinationPage extends React.Component {
       <style>{`
 
         #dest-wrapper-standard {
-          background-color: white;
+          background-color: #e3f2ff;
         }
 
         .modal-centering {
           display: flex;
           justify-content: center;
-          margin-bottom: 100px;
+          padding-bottom: 100px;
         }
 
       `}</style>
