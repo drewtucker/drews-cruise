@@ -1,11 +1,7 @@
 import React from 'react';
 import MediaQuery from 'react-responsive';
 import { Link } from 'react-router-dom';
-import * as firebase from 'firebase';
-import firebaseConfig from '../../constants/firebaseConfig';
-import destinationsBanner from '../../img/destinations-banner.jpg';
-
-
+import firebase from '../../constants/firebaseConfig';
 
 var storage = firebase.storage();
 
@@ -23,7 +19,8 @@ class DestinationsMain extends React.Component{
       newEnglandCard: '',
       newZealandCard: '',
       norwayCard: '',
-      thailandCard: ''
+      thailandCard: '',
+      banner: ''
     };
 
   }
@@ -31,6 +28,7 @@ class DestinationsMain extends React.Component{
   componentDidMount() {
     window.scrollTo(0, 0)
     const imageRef = storage.ref("/destinationCards");
+    const bannerRef = storage.ref('banners');
     imageRef.child('alaska.jpg').getDownloadURL().then((url) => {
       this.setState({alaskaCard: url})
     });
@@ -55,6 +53,10 @@ class DestinationsMain extends React.Component{
     imageRef.child('thailand.jpg').getDownloadURL().then((url) => {
       this.setState({ thailandCard: url })
     });
+    bannerRef.child('destinations-banner.jpg').getDownloadURL().then((url) => {
+      this.setState({ banner: url })
+    });
+
   }
   
   render(){
@@ -78,7 +80,7 @@ class DestinationsMain extends React.Component{
       <div className='banner-text-wrapper'>
         <p>Destinations</p>
       </div>
-      <img src={destinationsBanner}/>
+      <img src={this.state.banner}/>
       </div>
       <div className='sub-banner'>
         <div className='sub-banner-text'>
