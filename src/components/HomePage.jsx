@@ -1,8 +1,9 @@
 import React from 'react';
-import bgImage from '../img/single-boat-bg.jpeg';
 import MainCarousel from './MainCarousel';
 import MainBanner from '../components/MainBanner';
 import Greeting from '../components/Greeting';
+import * as firebase from 'firebase';
+import firebaseConfig from '../constants/firebaseConfig';
 
 function HomePage() {
 

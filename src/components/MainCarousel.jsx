@@ -1,26 +1,46 @@
 import React from 'react';
-import Slider from 'react-slick';
-import slide1 from './../img/carousel/italy.jpg';
-import slide2 from './../img/carousel/globe.jpg';
-import award from './../img/icons/award.png';
 import { Link } from 'react-router-dom';
-import MediaQuery from 'react-responsive';
 import { Carousel } from 'react-bootstrap';
+import firebase from 'firebase';
+
+var storage = firebase.storage();
 
 class MainCarousel extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      slide1: '',
+      slide2: '',
+      award: ''
+    }
+  }
+
+  componentDidMount() {
+    const imageRef = storage.ref("/mainCarousel");
+    imageRef.child('italy.jpg').getDownloadURL().then((url) => {
+      this.setState({ slide1: url })
+    });
+    imageRef.child('globe.jpg').getDownloadURL().then((url) => {
+      this.setState({ slide2: url })
+    });
+    imageRef.child('award.png').getDownloadURL().then((url) => {
+      this.setState({ award: url })
+    });
+  }
   render() {
 
     var CarouselSettings = {
       controls: false,
-      interval: 8000,
+      interval: 6000,
     }
 
     return(
       <div style={WrapperStyles}>
       <Carousel {...CarouselSettings}>
           <Carousel.Item>
-            <img className='award' src={award} />
-            <img  src={slide1} />
+            <img className='award' src={this.state.award} />
+            <img  src={this.state.slide1} />
             <Carousel.Caption>
               <h3></h3>
               <p></p>
@@ -33,7 +53,7 @@ class MainCarousel extends React.Component {
               <p className='hover-caption'>See Destinations</p>
               <i className='material-icons'>arrow_forward_ios</i>
             </div>
-            <img  src={slide2} />
+            <img  src={this.state.slide2} />
             </Link>
           </Carousel.Item>
       </Carousel>

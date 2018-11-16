@@ -1,31 +1,66 @@
 import React from 'react';
 import MediaQuery from 'react-responsive';
 import { Link } from 'react-router-dom';
-import alaskaCard from './../../img/alaska-card.jpg';
-import caribbeanCard from './../../img/caribbean-card.jpg';
-import cubaCard from './../../img/cuba-card.jpg';
-import destinationsBanner from './../../img/destinations-banner.jpg';
-import destinationsBG from './../../img/destinations-bg.jpg';
-import hawaiiCard from './../../img/hawaii-card.jpg';
-import newEnglandCard from './../../img/new-england-card.jpg';
-import newZealandCard from './../../img/new-zealand-card.jpg';
-import norwayCard from './../../img/norway-card.jpg';
-import thailandCard from './../../img/thailand-card.jpg';
+import * as firebase from 'firebase';
+import firebaseConfig from '../../constants/firebaseConfig';
+import destinationsBanner from '../../img/destinations-banner.jpg';
 
 
-const cards = { 'Alaska': alaskaCard, 'Caribbean': caribbeanCard, 'Cuba': cubaCard, 'Hawaii': hawaiiCard, 'New England': newEnglandCard, 'New Zealand': newZealandCard, 'Norway': norwayCard, 'Thailand': thailandCard,  };
+
+var storage = firebase.storage();
+
+
 
 class DestinationsMain extends React.Component{
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      alaskaCard: '',
+      caribbeanCard: '',
+      cubaCard: '',
+      hawaiiCard: '',
+      newEnglandCard: '',
+      newZealandCard: '',
+      norwayCard: '',
+      thailandCard: ''
+    };
+
+  }
+  
   componentDidMount() {
     window.scrollTo(0, 0)
+    const imageRef = storage.ref("/destinationCards");
+    imageRef.child('alaska.jpg').getDownloadURL().then((url) => {
+      this.setState({alaskaCard: url})
+    });
+    imageRef.child('caribbean.jpg').getDownloadURL().then((url) => {
+      this.setState({ caribbeanCard: url })
+    });
+    imageRef.child('cuba.jpg').getDownloadURL().then((url) => {
+      this.setState({ cubaCard: url })
+    });
+    imageRef.child('hawaii.jpg').getDownloadURL().then((url) => {
+      this.setState({ hawaiiCard: url })
+    });
+    imageRef.child('new-england.jpg').getDownloadURL().then((url) => {
+      this.setState({ newEnglandCard: url })
+    });
+    imageRef.child('new-zealand.jpg').getDownloadURL().then((url) => {
+      this.setState({ newZealandCard: url })
+    });
+    imageRef.child('norway.jpg').getDownloadURL().then((url) => {
+      this.setState({ norwayCard: url })
+    });
+    imageRef.child('thailand.jpg').getDownloadURL().then((url) => {
+      this.setState({ thailandCard: url })
+    });
   }
-
-  render(){
-    const {
-      route,
-    } = this.props;
   
+  render(){
+  
+    const cards = { 'Alaska': this.state.alaskaCard, 'Caribbean': this.state.caribbeanCard, 'Cuba': this.state.cubaCard, 'Hawaii': this.state.hawaiiCard, 'New England': this.state.newEnglandCard, 'New Zealand': this.state.newZealandCard, 'Norway': this.state.norwayCard, 'Thailand': this.state.thailandCard,  };
+    
   return(
     <div className='flex-container'>
       <MediaQuery maxWidth={737} className='mobile'>

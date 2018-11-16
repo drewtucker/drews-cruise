@@ -1,9 +1,7 @@
 import React from 'react';
 import DestinationPage from '../DestinationPage.jsx';
 import * as firebase from 'firebase';
-import firebaseConfig from '../../../firebase/firebaseConfig.js';
 
-firebase.initializeApp(firebaseConfig);
 var db = firebase.database();
 var storage = firebase.storage();
 
@@ -30,7 +28,6 @@ class Alaska extends React.Component {
     const imageRef = storage.ref("/destinationPage/alaska");
     let descr = [];
     let activities = [];
-    let images = [];
     // QUERY DATABASE TO RETRIEVE DESTINATION INFO AND UPDATE STATE WITH NEW DATA
     descrRef.once('value', (snapshot) => {
       descr.push(snapshot.val());

@@ -2,8 +2,9 @@ import React from 'react';
 import MediaQuery from 'react-responsive';
 import { Link } from 'react-router-dom';
 import firebase from 'firebase';
-import boatImg from '../img/icons/boat.png';
+import firebaseConfig from '../constants/firebaseConfig';
 
+var storage = firebase.storage();
 class Navbar extends React.Component {
 
   constructor(props) {
@@ -11,7 +12,15 @@ class Navbar extends React.Component {
 
     this.state = {
       isLoggedIn: false,
+      boatURL: ''
     }
+  }
+
+  componentDidMount(){
+    const imageRef = storage.ref("/icons");
+    imageRef.child('boat.png').getDownloadURL().then((url) => {
+      this.setState({boatURL: url})
+    })
   }
 
   //GOOGLE SIGN-IN HANDLERS
@@ -76,7 +85,7 @@ class Navbar extends React.Component {
                 <p>Casimir Cruises</p>
               </div>
             </Link>
-            <img src={boatImg} className='boat-icon' />
+            <img src={this.state.boatURL} className='boat-icon' />
           </div>
 
           <div id="navbar-wrapper-right">
@@ -118,7 +127,7 @@ class Navbar extends React.Component {
         <MediaQuery maxWidth={737}>
 
           <div id="mobile-icons-wrapper">
-            <Link to='/'><img src={boatImg} className='boat-icon-mobile' /> </Link>
+            <Link to='/'><img src={this.state.boatURL} className='boat-icon-mobile' /> </Link>
 
             <Link to="/destinations">
               <div className="navbar-icon-wrapper">
