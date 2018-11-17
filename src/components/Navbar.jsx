@@ -1,8 +1,7 @@
 import React from 'react';
 import MediaQuery from 'react-responsive';
 import { Link } from 'react-router-dom';
-import firebase from 'firebase';
-import firebaseConfig from '../constants/firebaseConfig';
+import firebase from '../constants/firebaseConfig.js';
 
 var storage = firebase.storage();
 class Navbar extends React.Component {
