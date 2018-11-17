@@ -5,10 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
 
   entry: [
-    'react-hot-loader/patch',
-    'webpack-dev-server/client?http://localhost:8080',
-    'webpack/hot/only-dev-server',
-    resolve(__dirname, 'src', 'index.js')
+    './src/index.js'
   ],
 
   output: {
@@ -58,13 +55,18 @@ module.exports = {
   },
 
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NamedModulesPlugin(),
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify('production')
+      }
+    }),
+    new webpack.optimize.UglifyJsPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
     new HtmlWebpackPlugin({
       template: 'template.ejs',
       appMountId: 'react-app-root',
-      title: "Casimir Cruises",
-      filename: resolve(__dirname, 'build', 'index.html')
-    })
+      title: 'Casimir Cruises',
+      filename: resolve(__dirname, "build", "index.html"),
+    }),
   ]
 };

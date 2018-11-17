@@ -15,14 +15,9 @@ import Contact from './Contact';
 import Legal from './Legal';
 import Privacy from './Privacy';
 import MobileBooking from './destinations/MobileBooking';
-import * as firebase from 'firebase';
-import firebaseConfig from '../constants/firebaseConfig';
 
 class App extends Component {
 
-  componentDidMount() {
-
-  }
   render() {
     return (
       <div>
