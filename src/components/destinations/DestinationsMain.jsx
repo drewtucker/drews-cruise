@@ -227,7 +227,7 @@ class DestinationsMain extends React.Component{
               z-index: 1;
               position: absolute;
               color: white;
-              text-shadow: 1px 1px 20px black;
+              text-shadow: 1px 1px 5px black;
               font-weight: bold;
             }
             
